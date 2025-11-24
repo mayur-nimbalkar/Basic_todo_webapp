@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#todo-task {
+  min-width: 600px;
+}
+
+.task-form {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
