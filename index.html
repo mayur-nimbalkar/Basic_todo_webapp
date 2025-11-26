@@ -3,47 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <title>ToDO WebApp</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDo WebApp</title>
   </head>
   <body>
-    <div class="container just">
-      <div>
-        <h1>Welcome to the TODO List</h1>
+    <div class="container">
+      <h1>Welcome to the TODO List</h1>
+      <div class="task-form">
+        <input
+          type="text"
+          name="todo-task"
+          id="todo-task"
+          placeholder="Enter a task to add..."
+          autocomplete="off"
+        />
+        <button type="button" class="add-task-btn" id="add-task-btn">
+          Add
+        </button>
+      </div>
+      <div class="task-container">
+        <h2>Pending tasks</h2>
+        <ul class="task-items" id="pending-task">
+          <!-- task would be added here dynamically -->
+        </ul>
+      </div>
+      <div class="task-container">
+        <h2>Completed tasks</h2>
+        <ul class="task-items" id="completed-task">
+          <!-- task would be added here dynamically -->
+        </ul>
       </div>
     </div>
-    <form class="task-form">
-      <input type="text" name="todo-task" id="todo-task" placeholder="Enter a task to add in List">
-      <button type="button" class="button justify-content-center" id="add-task-btn">Add</button>
-    </form>
-    <h2>Pending task</h2>
-    <ul id="pending-task">
-      <li>
-        <input type="checkbox" class="custom-checkbox" id="pending-chk1">
-        <label for="pending-chk1">Displaying task that was supposed to added here </label>
-        <button type="button" class="edit-pending-1">edit</button>
-        <button type="button" class="delete">delete</button>
-      </li>
-    </ul>
-    <h2>Completed task</h2>
-    <ul id="completed-task">
-       <li>
-        <input type="checkbox" class="custom-checkbox" id="pending-chk1">
-        <label for="pending-chk1">Displaying task that was supposed to added here </label>
-        <button type="button" class="edit-pending-1">edit</button>
-        <button type="button" class="delete">delete</button>
-      </li>
-    </ul>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
